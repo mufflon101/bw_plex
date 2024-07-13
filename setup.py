@@ -10,7 +10,7 @@ from setuptools import setup, find_packages
 # Possibly convert the README.md to .rst-format
 try:
     import pypandoc
-    README = pypandoc.convert('README.md', 'rst')
+    README = pypandoc.convert_file('README.md', 'rst')
 except ImportError:
     print("warning: pypandoc module not found, could not convert Markdown to RST")
     README = open('README.md', 'r').read()
